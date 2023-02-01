@@ -1,0 +1,211 @@
+
+
+https://blog.magestore.com/create-a-magento-module/
+
+https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/development/backend-6-practice.html?lang=en
+
+https://www.mageplaza.com/magento-2-module-development/how-to-create-crud-model-magento-2.html
+
+
+https://developer.adobe.com/commerce/php/tutorials/backend/create-custom-rest-api/
+
+
+https://amasty.com/knowledge-base/how-to-create-a-repository-interface-in-magento-2.html
+
+
+https://github.com/magento/magento2-samples
+
+----------
+
+
+Public key: df9425a802459334353ac92fb0641be9
+Private key: 9160aebf650d455c9380a3a4443988fa
+
+
+composer create-project --repository=https://repo.magento.com/ magento/project-community-edition ./src
+
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.3.7-P4 ./src
+
+ composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.5 ./src
+
+ composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4.5 ./web
+
+
+
+
+
+bin/magento setup:install \
+--base-url=http://localhost/src \
+--db-host=mysql \
+--db-name=simple-data \
+--db-user=root \
+--db-password= \
+--backend-frontname=admin \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=elasticsearch \
+--elasticsearch-port=9200
+
+
+
+
+bin/magento setup:install \
+--base-url=http://www.magento-dev.com \
+--db-host=mysql \
+--db-name=simple-data \
+--db-user=root \
+--db-password= \
+--backend-frontname=admin \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+
+bin/magento setup:install \
+--base-url=http://www.magento-dev.com \
+--db-host=mysql \
+--db-name=simple-data \
+--db-user=root \
+--db-password= \
+--backend-frontname=admin \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=elasticsearch \
+--elasticsearch-port=9200 --cleanup-database
+
+
+
+
+
+bin/magento setup:install \
+--base-url=http://www.magento-dev.com \
+--db-host=mysql \
+--db-name=mart \
+--db-user=root \
+--db-password= \
+--backend-frontname=admin \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=elasticsearch \
+--elasticsearch-port=9200 --cleanup-database
+
+
+
+rm -rf var/*
+rm -rf generated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+php bin/magento sampledata:deploy
+
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy -f --area 
+php bin/magento setup:di:compile
+
+
+https://developer.adobe.com/commerce/php/tutorials/backend/create-custom-rest-api/
+
+
+
+bin/magento setup:upgrade
+bin/magento setup:di:compile
+
+
+bin/magento module:status
+bin/magento module:enable 
+
+
+
+
+
+
+Goto app/etc/ and open env.php
+and change current application mode by MAGE_MODE' => 'default' to MAGE_MODE' => 'developer'
+
+
+
+
+
+frontend/Magento/blank/vi_VN     
+adminhtml/Magento/backend/en_US       
+frontend/Magento/luma/vi_VN
+
+php bin/magento setup:static-content:deploy -f --area adminhtml
+
+php bin/magento setup:static-content:deploy
+php bin/magento cache:flush
+
+php bin/magento setup:store-config:set --base-url-secure="https://www.magento-dev.com/"
+
+https://www.mageplaza.com/magento-2-module-development/how-to-create-crud-model-magento-2.html#step-5-factory-object
+
+
+
+	
+
+bin/magento module:disable Namespace_ModuleName
+remove directory from app/code manually
+bin/magento setup:upgrade
+bin/magento cache:flush
+
+listen = 127.0.0.1:9000
+
+echo 'export PATH="/usr/local/opt/php@8.1/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="/usr/local/opt/php@8.1/sbin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+
+
+https://devdocs.magento.com/redoc/2.3/
+
+
+https://magento.stackexchange.com/questions/219987/insert-multiple-rows-without-calling-model-save-inside-loop
+
+bin/magento deploy:mode:set developer
+
+
+
+
+https://stackoverflow.com/questions/69753332/running-nginx-docker-with-ssl-self-signed-certificate
+
+https://mindsers.blog/post/https-using-nginx-certbot-docker/
+
